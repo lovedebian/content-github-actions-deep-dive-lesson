@@ -82,7 +82,7 @@ jobs:
       - name: create docs folder
         run: mkdir docs
       - name: convert markdown to html - using docker container
-        uses: docker://pandoc/core:2.09
+        uses: docker://pandoc/core:2.9
         with:
           args: userguide.md -t html -o docs/index.html
       - name: deploy site
@@ -90,11 +90,3 @@ jobs:
         with:
           folder: docs
           branch: gh-pages
-    
-    
-    
-    
-    
-    
-    
-    
